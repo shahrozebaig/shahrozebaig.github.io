@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techmaa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #6DD5FA, #2980B9, #FFD194, #FFB347);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        header, footer {
+            background-color: rgba(0, 64, 128, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 115, 230, 0.9);
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+            background-color: rgba(255, 255, 255, 0.85);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 90%;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: #004080;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #0073e6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem 0;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+        /* Home Page */
+        #home {
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #home h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        /* Services */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.5rem;
+            margin: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background: #fff;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .service-box h3 {
+            margin-bottom: 1rem;
+            color: #004080;
+        }
+        /* Footer */
+        footer {
+            margin-top: 2rem;
+        }
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome To Techmaa</h1>
+        <p>Your Partner in Digital Excellence</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Empowering Businesses Through Technology</h1>
+        <p>We specialize in Digital Marketing, Software Development, and Branding Solutions.</p>
+        <a href="#services" class="btn">Explore Our Services</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2>About Us</h2>
+        <p>At Techmaa, we blend creativity with technology to provide cutting-edge digital solutions. With a passionate team of developers and marketers, we help businesses achieve their goals and grow in the digital world.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="fade-in">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>Digital Marketing</h3>
+                <p>From SEO to social media management, we enhance your digital presence and engagement.</p>
+            </div>
+            <div class="service-box">
+                <h3>Software Development</h3>
+                <p>Custom software solutions tailored to meet your business needs.</p>
+            </div>
+            <div class="service-box">
+                <h3>Branding Solutions</h3>
+                <p>Professional branding, logo design, and UI/UX services to make your business stand out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <p>Ready to grow your business? Reach out to us today!</p>
+        <p>Email: <a href="mailto:hrd@techmaa.org">hrd@techmaa.org</a></p>
+        <p>Phone: +91 9412590692</p>
+        <a href="#" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; TechMaa Organisations
+A brand of Pru Technology Pvt Ltd.
+Reg. New Delhi & Corporate Office Noida.
+Working Since September 2021. Be are the IT & Projects Management Company. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add Scroll Animation
+        const sections = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
